@@ -24,6 +24,12 @@ namespace Project.Controllers
             return await _presentsService.Get();
         }
 
+        [HttpGet("getById")]
+        public async Task<IEnumerable<PresentDTO2>> Get(int id)
+        {
+            return await _presentsService.GetById();
+        }
+
         [HttpGet("getPresentsPurcheses{buyerId}")]
         public async Task<IEnumerable<PresentDTO2>> getPresentsPurcheses(int buyerId)
         {
